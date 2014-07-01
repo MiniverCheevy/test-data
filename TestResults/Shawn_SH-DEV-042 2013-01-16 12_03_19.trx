@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7957a012-e003-4a3d-a258-f36c35103066" name="Shawn@SH-DEV-042 2013-01-16 12:03:19" runUser="SH-DEV-042\Shawn" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="067b937d-87fd-4436-b67f-c22711a89d69">
+    <Deployment runDeploymentRoot="Shawn_SH-DEV-042 2013-01-16 12_03_19">
+      <DeploymentItem filename="C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData\bin\Debug\Voodoo.TestData.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-16T12:03:19.2694648-06:00" queuing="2013-01-16T12:03:19.3837907-06:00" start="2013-01-16T12:03:19.3887934-06:00" finish="2013-01-16T12:03:19.6118719-06:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestNotSettingSeedCausesTheSameValuesToBeGeneratede" storage="c:\dropbox\lib\projects\voodoo\voodoo.testdata\voodoo.testdata.tests\bin\debug\voodootestdatatest.dll" id="27c6d0c3-34db-9d64-8a06-a9f980b13db7">
+      <Execution id="355e9790-8538-4322-bb75-6bdde189bee1" />
+      <TestMethod codeBase="C:/Dropbox/Lib/Projects/Voodoo/Voodoo.TestData/Voodoo.TestData.Tests/bin/Debug/VoodooTestDataTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Voodoo.TestDataTest.RandomTest, VoodooTestDataTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestNotSettingSeedCausesTheSameValuesToBeGeneratede" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="27c6d0c3-34db-9d64-8a06-a9f980b13db7" executionId="355e9790-8538-4322-bb75-6bdde189bee1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="355e9790-8538-4322-bb75-6bdde189bee1" testId="27c6d0c3-34db-9d64-8a06-a9f980b13db7" testName="TestNotSettingSeedCausesTheSameValuesToBeGeneratede" computerName="SH-DEV-042" duration="00:00:00.0968388" startTime="2013-01-16T12:03:19.3917931-06:00" endTime="2013-01-16T12:03:19.6028686-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="355e9790-8538-4322-bb75-6bdde189bee1">
+      <Output>
+        <DebugTrace>1st Pass
+9
+5
+9
+2
+1
+5
+7
+6
+7
+9
+2nd Pass
+8
+6
+3
+3
+6
+8
+1
+7
+4
+7
+3rd Pass
+2
+4
+8
+9
+3
+7
+2
+2
+5
+4
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

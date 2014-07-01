@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="01a0621e-c90f-4b8b-9a54-ccfcfcd04068" name="Shawn@SH-DEV-042 2013-10-03 14:49:31" runUser="SH-DEV-042\Shawn" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="4c303c52-cf8d-45ca-8717-d79ccd338271">
+    <Deployment runDeploymentRoot="Shawn_SH-DEV-042 2013-10-03 14_49_31">
+      <DeploymentItem filename="C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData\bin\Debug\Voodoo.TestData.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-10-03T14:49:31.0171240-05:00" queuing="2013-10-03T14:49:32.0755005-05:00" start="2013-10-03T14:49:32.2255541-05:00" finish="2013-10-03T14:52:56.4132203-05:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="1" executed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="SH-DEV-042" outcome="Error" timestamp="2013-10-03T14:52:56.4122199-05:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="RandomizerWorksAsExpectedWithWellData" storage="c:\dropbox\lib\projects\voodoo\voodoo.testdata\voodoo.testdata.tests\bin\debug\voodootestdatatest.dll" id="833b0ef4-58b6-6030-b876-7c7670e1716a">
+      <Execution id="cb773bfb-9743-4709-a6ca-ccfc8d9b9907" />
+      <TestMethod codeBase="C:/Dropbox/Lib/Projects/Voodoo/Voodoo.TestData/Voodoo.TestData.Tests/bin/Debug/VoodooTestDataTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="VoodooTestDataTest.RandomizerTests, VoodooTestDataTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="RandomizerWorksAsExpectedWithWellData" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="833b0ef4-58b6-6030-b876-7c7670e1716a" executionId="cb773bfb-9743-4709-a6ca-ccfc8d9b9907" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="cb773bfb-9743-4709-a6ca-ccfc8d9b9907" testId="833b0ef4-58b6-6030-b876-7c7670e1716a" testName="RandomizerWorksAsExpectedWithWellData" computerName="SH-DEV-042" duration="00:03:24.0716249" startTime="2013-10-03T14:49:32.3415954-05:00" endTime="2013-10-03T14:52:56.4132203-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cb773bfb-9743-4709-a6ca-ccfc8d9b9907">
+    </UnitTestResult>
+  </Results>
+</TestRun>

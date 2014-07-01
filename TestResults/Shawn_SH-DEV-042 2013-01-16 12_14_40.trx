@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="efb3a31d-43d7-4c4a-8200-225172786dc0" name="Shawn@SH-DEV-042 2013-01-16 12:14:40" runUser="SH-DEV-042\Shawn" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="bbbf3c7b-250c-454e-9a2a-59bc62865e25">
+    <Deployment userDeploymentRoot="C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\TestResults" useDefaultDeploymentRoot="false" runDeploymentRoot="Shawn_SH-DEV-042 2013-01-16 12_14_40">
+      <DeploymentItem filename="C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData\bin\Debug\Voodoo.TestData.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-16T12:14:40.9216283-06:00" queuing="2013-01-16T12:14:41.3897946-06:00" start="2013-01-16T12:14:41.4228048-06:00" finish="2013-01-16T12:14:41.8649980-06:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="SequentialCallsGenerateDifferentRandomValues" storage="c:\dropbox\lib\projects\voodoo\voodoo.testdata\voodoo.testdata.tests\bin\debug\voodootestdatatest.dll" id="770674c9-d5aa-9a11-d130-7059ded87b70">
+      <Execution id="c3171a40-cc6a-4bf5-beba-4cac287ff200" />
+      <TestMethod codeBase="C:/Dropbox/Lib/Projects/Voodoo/Voodoo.TestData/Voodoo.TestData.Tests/bin/Debug/VoodooTestDataTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="VoodooTestDataTest.RandomizerTests, VoodooTestDataTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SequentialCallsGenerateDifferentRandomValues" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="770674c9-d5aa-9a11-d130-7059ded87b70" executionId="c3171a40-cc6a-4bf5-beba-4cac287ff200" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="c3171a40-cc6a-4bf5-beba-4cac287ff200" testId="770674c9-d5aa-9a11-d130-7059ded87b70" testName="SequentialCallsGenerateDifferentRandomValues" computerName="SH-DEV-042" duration="00:00:00.1519408" startTime="2013-01-16T12:14:41.4658203-06:00" endTime="2013-01-16T12:14:41.7819667-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3171a40-cc6a-4bf5-beba-4cac287ff200">
+    </UnitTestResult>
+  </Results>
+</TestRun>

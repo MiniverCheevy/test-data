@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="4ee05f80-7339-4a6e-8546-127798abff3f" name="Shawn@SH-DEV-042 2013-01-16 12:01:01" runUser="SH-DEV-042\Shawn" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="22e87749-5070-42ab-866f-0fe551cfa3dc">
+    <Deployment runDeploymentRoot="Shawn_SH-DEV-042 2013-01-16 12_01_01">
+      <DeploymentItem filename="C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData\bin\Debug\Voodoo.TestData.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-16T12:01:01.3252476-06:00" queuing="2013-01-16T12:01:01.5931182-06:00" start="2013-01-16T12:01:01.6251279-06:00" finish="2013-01-16T12:01:02.0201433-06:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestNotSettingSeedCausesTheSameValuesToBeGeneratede" storage="c:\dropbox\lib\projects\voodoo\voodoo.testdata\voodoo.testdata.tests\bin\debug\voodootestdatatest.dll" id="27c6d0c3-34db-9d64-8a06-a9f980b13db7">
+      <Execution id="8e28cd25-7ef8-4ab7-a627-54a288f57c82" />
+      <TestMethod codeBase="C:/Dropbox/Lib/Projects/Voodoo/Voodoo.TestData/Voodoo.TestData.Tests/bin/Debug/VoodooTestDataTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Voodoo.TestDataTest.RandomTest, VoodooTestDataTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestNotSettingSeedCausesTheSameValuesToBeGeneratede" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="27c6d0c3-34db-9d64-8a06-a9f980b13db7" executionId="8e28cd25-7ef8-4ab7-a627-54a288f57c82" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8e28cd25-7ef8-4ab7-a627-54a288f57c82" testId="27c6d0c3-34db-9d64-8a06-a9f980b13db7" testName="TestNotSettingSeedCausesTheSameValuesToBeGeneratede" computerName="SH-DEV-042" duration="00:00:00.1695843" startTime="2013-01-16T12:01:01.6681446-06:00" endTime="2013-01-16T12:01:01.9908607-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e28cd25-7ef8-4ab7-a627-54a288f57c82">
+      <Output>
+        <DebugTrace>1st Pass
+2
+8
+7
+1
+4
+4
+9
+4
+3
+5
+2nd Pass
+3
+7
+8
+1
+9
+2
+2
+4
+8
+6
+3rd Pass
+9
+9
+5
+2
+3
+6
+1
+6
+7
+7
+</DebugTrace>
+        <ErrorInfo>
+          <Message>Assert.AreNotEqual failed. Expected any value except:&lt;1&gt;. Actual:&lt;1&gt;. </Message>
+          <StackTrace>   at Voodoo.TestDataTest.RandomTest.TestNotSettingSeedCausesTheSameValuesToBeGeneratede() in C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData.Tests\RandomTest.cs:line 134
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

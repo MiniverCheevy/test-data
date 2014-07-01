@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="d8d004f0-4160-4e50-93ff-19ce21ac86af" name="Shawn@SH-DEV-042 2013-01-16 12:12:37" runUser="SH-DEV-042\Shawn" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="bbbf3c7b-250c-454e-9a2a-59bc62865e25">
+    <Deployment runDeploymentRoot="Shawn_SH-DEV-042 2013-01-16 12_12_37">
+      <DeploymentItem filename="C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData\bin\Debug\Voodoo.TestData.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-01-16T12:12:37.5988964-06:00" queuing="2013-01-16T12:12:37.8898256-06:00" start="2013-01-16T12:12:37.9208369-06:00" finish="2013-01-16T12:12:38.3711044-06:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="SequentialCallsGenerateDifferentRandomValues" storage="c:\dropbox\lib\projects\voodoo\voodoo.testdata\voodoo.testdata.tests\bin\debug\voodootestdatatest.dll" id="770674c9-d5aa-9a11-d130-7059ded87b70">
+      <Execution id="a6a29c0c-ca95-41d7-a066-ae47fe5ec56e" />
+      <TestMethod codeBase="C:/Dropbox/Lib/Projects/Voodoo/Voodoo.TestData/Voodoo.TestData.Tests/bin/Debug/VoodooTestDataTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="VoodooTestDataTest.RandomizerTests, VoodooTestDataTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="SequentialCallsGenerateDifferentRandomValues" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="770674c9-d5aa-9a11-d130-7059ded87b70" executionId="a6a29c0c-ca95-41d7-a066-ae47fe5ec56e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="a6a29c0c-ca95-41d7-a066-ae47fe5ec56e" testId="770674c9-d5aa-9a11-d130-7059ded87b70" testName="SequentialCallsGenerateDifferentRandomValues" computerName="SH-DEV-042" duration="00:00:00.2070823" startTime="2013-01-16T12:12:37.9698579-06:00" endTime="2013-01-16T12:12:38.3320907-06:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a6a29c0c-ca95-41d7-a066-ae47fe5ec56e">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method VoodooTestDataTest.RandomizerTests.SequentialCallsGenerateDifferentRandomValues threw exception: 
+System.NullReferenceException: Object reference not set to an instance of an object.</Message>
+          <StackTrace>    at Voodoo.TestData.Randomizer.Randomize(Object object) in C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData\Randomizer.cs:line 62
+   at VoodooTestDataTest.RandomizerTests.SequentialCallsGenerateDifferentRandomValues() in C:\Dropbox\Lib\Projects\Voodoo\Voodoo.TestData\Voodoo.TestData.Tests\RandomizerTests.cs:line 31
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
