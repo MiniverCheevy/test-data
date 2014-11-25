@@ -21,6 +21,7 @@ namespace Voodoo.TestData
         public List<string> prefixMale = new List<string>();
         public List<string> streetParts1 = new List<string>();
         public List<string> streetParts2 = new List<string>();
+        public List<string> address2Parts = new List<string>();
         public List<string> streetParts3 = new List<string>();
         public List<string> suffix = new List<string>();
         public List<string> usedNames = new List<string>();
@@ -38,6 +39,7 @@ namespace Voodoo.TestData
             adjectives = ReadFileLineByLine("Adjective.txt");
             groceries = ReadFileLineByLine("grocery.txt");
             LoremIpsum = ReadFile("LoremIpsum.txt");
+            address2Parts = ReadFileLineByLine("AddressLine2.txt");
 
             var zipTemp = ReadFileLineByLine("zip5.txt");
             foreach (var s in zipTemp)
@@ -66,8 +68,9 @@ namespace Voodoo.TestData
                     var trimmed = new List<string>();
                     foreach (var element in second)
                     {
-                        trimmed.Add(element.ToString().Trim());
+                        trimmed.Add(element.ToLower().Trim());
                     }
+                    trimmed.Add(key.ToLower());
                     autofill.Add(key, trimmed.ToArray());
                 }
             }

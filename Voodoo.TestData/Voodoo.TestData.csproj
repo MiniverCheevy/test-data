@@ -134,6 +134,7 @@
     <Folder Include="Utillity\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Data\AddressLine2.txt" />
     <Content Include="license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

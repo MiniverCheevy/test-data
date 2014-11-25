@@ -14,6 +14,7 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
         public const string Prefix = "Prefix";
         public const string EmailAddress = "EmailAddress";
         public const string Address1 = "Address1";
+        public const string Address2 = "Address2";
         public const string City = "City";
         public const string County = "County";
         public const string State = "State";
@@ -85,7 +86,8 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
         public override void SetValue(object @object, PropertyInfo info)
         {
             var name = info.Name;
-
+            var value = string.Format("{0} {1}", Generator.GetAdjective(), Generator.Grocery());
+            SetPropertyValue(@object, info, value.ToString());
             foreach (var item in TestHelper.Data.RandomData.autofill)
             {
                 if (HasMatch(name, item.Value))
@@ -93,12 +95,6 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
                     chooseValue(@object, info, item.Key);
                     break;
                 }
-            }
-            var value = info.GetValue(@object, null);
-            if (value == null)
-            {
-                value = string.Format("{0} {1}", Generator.GetAdjective(), Generator.Grocery());
-                SetPropertyValue(@object, info, value.ToString());
             }
             var stringValue = value.ToString();
 
@@ -149,6 +145,9 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
                 case EmailAddress:
                     SetPropertyValue(@object, info, Person.EmailAddress);
                     break;
+                case Address2:
+                    SetPropertyValue(@object, info, Person.Address.Address2);
+                    break;
                 case Address1:
                     SetPropertyValue(@object, info, Person.Address.Address1);
                     break;
@@ -165,7 +164,8 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
                     SetPropertyValue(@object, info, Person.Address.ZipCode);
                     break;
                 case PhoneNumber:
-
+                    if (info.PropertyType == typeof(string))
+                        SetPropertyValue(@object,info, Generator.NumericString(10));
                     break;
                 case FullName:
                     SetPropertyValue(@object, info, Person.FullName);

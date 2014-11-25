@@ -161,3 +161,5 @@ When you're in jail, a good friend will be trying to bail you out. A best friend
 Never memorize something that you can look up. ― Albert Einstein
 Fate is like a strange, unpopular restaurant filled with odd little waiters who bring you things you never asked for and don't always like. ― Lemony Snicket
 Right now I’m having amnesia and déjà vu at the same time. I think I’ve forgotten this before.
+Walking on water and developing software from a specification are easy if both are frozen.
+Perfection [in design] is achieved, not when there is nothing more to add, but when there is nothing left to take away. - Antoine de Saint-Exupéry

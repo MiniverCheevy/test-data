@@ -60,6 +60,11 @@ namespace Voodoo.TestData.Builders
 
             toReturn.Address1 = sb.ToString();
 
+            if (TestHelper.Data.Int(1, 9) > 6)
+                toReturn.Address2 = string.Format("{0} {1}", RandomData.address2Parts.RandomElement(),
+                                                  TestHelper.Data.Int(1, 10000));
+
+
             return toReturn;
         }
     }
