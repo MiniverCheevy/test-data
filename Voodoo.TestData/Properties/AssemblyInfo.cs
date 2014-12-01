@@ -4,7 +4,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-
+[assembly: AssemblyVersion("1.0.9")]
+[assembly: AssemblyFileVersion("1.0.9")]
 [assembly: AssemblyTitle("Voodoo.TestData")]
 [assembly:
     AssemblyDescription(
@@ -38,5 +39,3 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 
-[assembly: AssemblyVersion("1.0.5")]
-[assembly: AssemblyFileVersion("1.0.5")]
