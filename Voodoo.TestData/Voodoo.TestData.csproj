@@ -75,6 +75,7 @@
   <ItemGroup>
     <Compile Include="Builders\AddressBuilder.cs" />
     <Compile Include="Builders\PersonBuilder.cs" />
+    <Compile Include="RandomExtensions.cs" />
     <Compile Include="RandomSeedData.cs" />
     <Compile Include="Domains\RandomPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,7 +85,6 @@
     <Compile Include="Strategy\TypeStrategy\RangeGenerationStrategyFactory.cs" />
     <Compile Include="TestHelper.cs" />
     <Compile Include="Randomizer.cs" />
-    <Compile Include="Strategy\NameStrategy\NameGenerationStrategy.cs" />
     <Compile Include="Strategy\TypeStrategy\PrimitiveStrategies.cs" />
     <Compile Include="Strategy\TypeStrategy\StringGenerationStrategy.cs" />
     <Compile Include="Strategy\Strategy.cs" />
@@ -130,9 +130,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Data\LoremIpsum.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utillity\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Data\AddressLine2.txt" />
     <Content Include="license.txt" />

@@ -4,227 +4,201 @@ using System.Text;
 
 namespace Voodoo.TestData
 {
-    public class RandomPerson
-    {
-        #region Fields
+	public class RandomPerson
+	{
+		public override string ToString()
+		{
+			var sb = new StringBuilder();
+			sb.Append(FullName);
+			sb.Append(" ");
+			sb.Append(Gender);
+			sb.Append(" ");
+			sb.Append(AgeRange);
+			sb.Append(" ");
+			sb.Append(BirthDay.ToShortDateString());
+			sb.Append(" ");
+			sb.Append(SSN);
+			sb.Append(" ");
+			sb.Append(Address);
 
-        private string firstName = string.Empty;
-        private string lastName = string.Empty;
-        private string middleName = string.Empty;
-        private string prefix = string.Empty;
-        private string suffix = string.Empty;
+			return sb.ToString();
+		}
 
-        #endregion
+		public Dictionary<string, string> ToHash()
+		{
+			var hash = new Dictionary<string, string>();
 
-        #region Properties
+			hash.Add("BirthDay", "");
+			hash.Add("EmailAddress", EmailAddress);
+			hash.Add("FirstName", FirstName);
+			hash.Add("FullName", FullName);
+			hash.Add("Gender", Gender.ToString());
+			hash.Add("Initials", Initials);
+			hash.Add("LastName", LastName);
+			hash.Add("MiddleInitial", MiddleInitial.ToString());
+			hash.Add("MiddleName", MiddleName);
+			hash.Add("Prefix", Prefix);
+			hash.Add("SSN", SSN);
+			hash.Add("Suffix", Suffix);
+			hash.Add("Address1", Address.Address1);
+			hash.Add("City", Address.City);
+			hash.Add("County", Address.County);
+			hash.Add("Latitude", Address.Latitude.ToString());
+			hash.Add("Longitude", Address.Longitude.ToString());
+			hash.Add("State", Address.State);
+			hash.Add("ZipCode", Address.ZipCode);
+			return hash;
+		}
 
-        public Gender Gender { get; set; }
-        public AgeRange AgeRange { get; set; }
-        public string EmailAddress { get; set; }
-        public string SSN { get; set; }
-        public DateTime BirthDay { get; set; }
-        public RandomAddress Address { get; set; }
+		#region Fields
 
-        public string FullName
-        {
-            get
-            {
-                var sb = new StringBuilder();
-                sb.Append(firstName);
-                sb.Append(" ");
+		#endregion
 
-                if (middleName.Length > 0)
-                {
-                    sb.Append(middleName);
-                    sb.Append(" ");
-                }
+		#region Properties
 
-                sb.Append(lastName);
+		public Gender Gender { get; set; }
+		public AgeRange AgeRange { get; set; }
+		public string EmailAddress { get; set; }
+		public string SSN { get; set; }
+		public DateTime BirthDay { get; set; }
+		public RandomAddress Address { get; set; }
 
-                if (suffix.Length > 0)
-                {
-                    sb.Append(" ");
-                    sb.Append(suffix);
-                }
+		public string FullName
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.Append(FirstName);
+				sb.Append(" ");
 
-                return sb.ToString();
-            }
-        }
+				if (MiddleName.Length > 0)
+				{
+					sb.Append(MiddleName);
+					sb.Append(" ");
+				}
 
-        public string FirstAndLastName
-        {
-            get
-            {
-                var sb = new StringBuilder();
-                sb.Append(firstName);
-                sb.Append(" ");
-                sb.Append(lastName);
-                return sb.ToString();
-            }
-        }
+				sb.Append(LastName);
 
-        public string FirstAndLastNameWithSuffix
-        {
-            get
-            {
-                var sb = new StringBuilder();
-                sb.Append(firstName);
-                sb.Append(" ");
-                sb.Append(lastName);
+				if (Suffix.Length > 0)
+				{
+					sb.Append(" ");
+					sb.Append(Suffix);
+				}
 
-                if (suffix.Length > 0)
-                {
-                    sb.Append(" ");
-                    sb.Append(suffix);
-                }
+				return sb.ToString();
+			}
+		}
 
-                return sb.ToString();
-            }
-        }
+		public string FirstAndLastName
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.Append(FirstName);
+				sb.Append(" ");
+				sb.Append(LastName);
+				return sb.ToString();
+			}
+		}
 
-        public string LastThenFirstName
-        {
-            get
-            {
-                var sb = new StringBuilder();
-                sb.Append(lastName);
-                sb.Append(", ");
-                sb.Append(firstName);
-                return sb.ToString();
-            }
-        }
+		public string FirstAndLastNameWithSuffix
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.Append(FirstName);
+				sb.Append(" ");
+				sb.Append(LastName);
 
-        public string LastNameThenFirstInitial
-        {
-            get
-            {
-                var sb = new StringBuilder();
-                sb.Append(lastName);
-                sb.Append(", ");
-                sb.Append(firstName[0]);
-                sb.Append(".");
-                return sb.ToString();
-            }
-        }
+				if (Suffix.Length > 0)
+				{
+					sb.Append(" ");
+					sb.Append(Suffix);
+				}
 
-        public string FirstInitialAndLastName
-        {
-            get
-            {
-                var sb = new StringBuilder();
-                sb.Append(firstName[0]);
-                sb.Append(". ");
-                sb.Append(lastName);
-                return sb.ToString();
-            }
-        }
+				return sb.ToString();
+			}
+		}
 
-        public string Initials
-        {
-            get
-            {
-                var sb = new StringBuilder();
-                sb.Append(firstName[0]);
+		public string LastThenFirstName
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.Append(LastName);
+				sb.Append(", ");
+				sb.Append(FirstName);
+				return sb.ToString();
+			}
+		}
 
-                if (middleName.Length > 0)
-                {
-                    sb.Append(middleName[0]);
-                }
+		public string LastNameThenFirstInitial
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.Append(LastName);
+				sb.Append(", ");
+				sb.Append(FirstName[0]);
+				sb.Append(".");
+				return sb.ToString();
+			}
+		}
 
-                sb.Append(lastName[0]);
-                return sb.ToString();
-            }
-        }
+		public string FirstInitialAndLastName
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.Append(FirstName[0]);
+				sb.Append(". ");
+				sb.Append(LastName);
+				return sb.ToString();
+			}
+		}
 
-        public char? MiddleInitial
-        {
-            get
-            {
-                char? middleInitial = null;
+		public string Initials
+		{
+			get
+			{
+				var sb = new StringBuilder();
+				sb.Append(FirstName[0]);
 
-                if (middleName.Length > 0)
-                {
-                    middleInitial = middleName[0];
-                }
+				if (MiddleName.Length > 0)
+				{
+					sb.Append(MiddleName[0]);
+				}
 
-                return middleInitial;
-            }
-        }
+				sb.Append(LastName[0]);
+				return sb.ToString();
+			}
+		}
 
-        public string FirstName
-        {
-            get { return firstName; }
-            set { firstName = value; }
-        }
+		public char? MiddleInitial
+		{
+			get
+			{
+				char? middleInitial = null;
 
-        public string MiddleName
-        {
-            get { return middleName; }
-            set { middleName = value; }
-        }
+				if (MiddleName.Length > 0)
+				{
+					middleInitial = MiddleName[0];
+				}
 
-        public string LastName
-        {
-            get { return lastName; }
-            set { lastName = value; }
-        }
+				return middleInitial;
+			}
+		}
 
-        public string Suffix
-        {
-            get { return suffix; }
-            set { suffix = value; }
-        }
+		public string FirstName { get; set; } = string.Empty;
 
-        public string Prefix
-        {
-            get { return prefix; }
-            set { prefix = value; }
-        }
+		public string MiddleName { get; set; } = string.Empty;
 
-        #endregion
+		public string LastName { get; set; } = string.Empty;
 
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append(FullName);
-            sb.Append(" ");
-            sb.Append(Gender.ToString());
-            sb.Append(" ");
-            sb.Append(AgeRange.ToString());
-            sb.Append(" ");
-            sb.Append(BirthDay.ToShortDateString());
-            sb.Append(" ");
-            sb.Append(SSN);
-            sb.Append(" ");
-            sb.Append(Address);
+		public string Suffix { get; set; } = string.Empty;
 
-            return sb.ToString();
-        }
+		public string Prefix { get; set; } = string.Empty;
 
-        public Dictionary<string, string> ToHash()
-        {
-            var hash = new Dictionary<string, string>();
-
-            hash.Add("BirthDay", "");
-            hash.Add("EmailAddress", this.EmailAddress);
-            hash.Add("FirstName", this.firstName);
-            hash.Add("FullName", this.FullName);
-            hash.Add("Gender", this.Gender.ToString());
-            hash.Add("Initials", this.Initials);
-            hash.Add("LastName", this.lastName);
-            hash.Add("MiddleInitial", this.MiddleInitial.ToString());
-            hash.Add("MiddleName", this.middleName);
-            hash.Add("Prefix", this.prefix);
-            hash.Add("SSN", this.SSN);
-            hash.Add("Suffix", this.suffix);
-            hash.Add("Address1", this.Address.Address1);
-            hash.Add("City", this.Address.City);
-            hash.Add("County", this.Address.County);
-            hash.Add("Latitude", this.Address.Latitude.ToString());
-            hash.Add("Longitude", this.Address.Longitude.ToString());
-            hash.Add("State", this.Address.State);
-            hash.Add("ZipCode", this.Address.ZipCode);
-            return hash;
-        }
-    }
+		#endregion
+	}
 }

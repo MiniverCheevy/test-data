@@ -4,13 +4,14 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
+
 [assembly: AssemblyVersion("1.0.9")]
 [assembly: AssemblyFileVersion("1.0.9")]
 [assembly: AssemblyTitle("Voodoo.TestData")]
 [assembly:
-    AssemblyDescription(
-        "A c# library for generating test data, offering the option to randomize an object or customize randomization strategies."
-        )]
+	AssemblyDescription(
+		"A c# library for generating test data, offering the option to randomize an object or customize randomization strategies."
+		)]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Shawn Doucet")]
 [assembly: AssemblyProduct("TestData")]
@@ -38,4 +39,3 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-

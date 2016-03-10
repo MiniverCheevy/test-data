@@ -1,162 +1,118 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System.Collections.Generic;
 using System.Diagnostics;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Voodoo.TestData;
 
-namespace Voodoo.TestDataTest
+namespace VoodooTestDataTest
 {
-    /// <summary>
-    /// Summary description for RandomTest
-    /// </summary>
-    [TestClass]
-    public class RandomTest
-    {
-        public RandomTest()
-        {
-            //
-            // TODO: Add constructor logic here
-            //
-        }
+	[TestClass]
+	public class RandomTest
+	{
+		
+		[TestMethod]
+		public void SetRandomDataSeed_TestSettingSeed_CausesTheSameValuesToBeGeneratede()
+		{
+			var num = 0;
+			var firstPass = new List<int>();
+			var secondPass = new List<int>();
+			var thirdPass = new List<int>();
 
-        private TestContext testContextInstance;
+			Debug.WriteLine("1st Pass");
+			TestHelper.SetRandomDataSeed(1);
+			for (var i = 0; i < 10; i++)
 
-        /// <summary>
-        ///Gets or sets the test context which provides
-        ///information about and functionality for the current test run.
-        ///</summary>
-        public TestContext TestContext
-        {
-            get
-            {
-                return testContextInstance;
-            }
-            set
-            {
-                testContextInstance = value;
-            }
-        }
+			{
+				num = TestHelper.Data.Int(1, 10);
+				firstPass.Add(num);
+				Debug.WriteLine(num);
+			}
 
+			Debug.WriteLine("2nd Pass");
+			TestHelper.SetRandomDataSeed(1);
+			for (var i = 0; i < 10; i++)
 
+			{
+				num = TestHelper.Data.Int(1, 10);
+				secondPass.Add(num);
+				Debug.WriteLine(num);
+			}
 
-        [TestMethod]
-        public void TestSettingSeedCausesTheSameValuesToBeGeneratede()
-        {
-            var num = 0;
-            List<int> firstPass = new List<int>();
-            List<int> secondPass = new List<int>();
-            List<int> thirdPass = new List<int>();
+			Debug.WriteLine("3rd Pass");
+			TestHelper.SetRandomDataSeed(1);
+			for (var i = 0; i < 10; i++)
 
-            Debug.WriteLine ("1st Pass");
-            TestHelper.SetRandomDataSeed(1);
-            for (int i = 0; i < 10; i++) 
+			{
+				num = TestHelper.Data.Int(1, 10);
+				thirdPass.Add(num);
+				Debug.WriteLine(num);
+			}
 
-            {
-               
-                num = TestHelper.Data.Int(1, 10);
-                firstPass.Add(num);
-                Debug.WriteLine(num);
-               
-            }
-            
-            Debug.WriteLine ("2nd Pass");
-            TestHelper.SetRandomDataSeed(1);
-            for (int i = 0; i< 10; i++) 
+			for (var i = 0; i < 10; i++)
+			{
+				Assert.AreEqual(firstPass[i], secondPass[i]);
+				Assert.AreEqual(firstPass[i], thirdPass[i]);
+			}
+		}
 
-            {
-                num = TestHelper.Data.Int(1, 10);
-                secondPass.Add(num);
-                Debug.WriteLine(num);
-                
-            }
-            
-            Debug.WriteLine ("3rd Pass");
-            TestHelper.SetRandomDataSeed(1);
-            for (int i = 0; i < 10; i++) 
+		[TestMethod]
+		public void TestNotSettingSeedCausesTheSameValuesToBeGeneratede()
+		{
+			var num = 0;
+			var firstPass = new List<int>();
+			var secondPass = new List<int>();
+			var thirdPass = new List<int>();
 
-            {
-                num = TestHelper.Data.Int(1, 10);
-                thirdPass.Add(num);
-                Debug.WriteLine(num);
-                
-            }
+			Debug.WriteLine("1st Pass");
 
-            for (int i = 0; i < 10; i++)
-            {
-                Assert.AreEqual(firstPass[i], secondPass[i]);
-                Assert.AreEqual(firstPass[i], thirdPass[i]);
-            }
-        }
+			for (var i = 0; i < 10; i++)
+			{
+				num = TestHelper.Data.Int(1, 10);
+				firstPass.Add(num);
+				Debug.WriteLine(num);
+			}
 
-        [TestMethod]
-        public void TestNotSettingSeedCausesTheSameValuesToBeGeneratede()
-        {
-            var num = 0;
-            List<int> firstPass = new List<int>();
-            List<int> secondPass = new List<int>();
-            List<int> thirdPass = new List<int>();
+			Debug.WriteLine("2nd Pass");
 
-            Debug.WriteLine("1st Pass");
-            
-            for (int i = 0; i < 10; i++)
-            {
+			for (var i = 0; i < 10; i++)
+			{
+				num = TestHelper.Data.Int(1, 10);
+				secondPass.Add(num);
+				Debug.WriteLine(num);
+			}
 
-                num = TestHelper.Data.Int(1, 10);
-                firstPass.Add(num);
-                Debug.WriteLine(num);
+			Debug.WriteLine("3rd Pass");
 
-            }
+			for (var i = 0; i < 10; i++)
+			{
+				num = TestHelper.Data.Int(1, 10);
+				thirdPass.Add(num);
+				Debug.WriteLine(num);
+			}
 
-            Debug.WriteLine("2nd Pass");
-            
-            for (int i = 0; i < 10; i++)
-            {
-                num = TestHelper.Data.Int(1, 10);
-                secondPass.Add(num);
-                Debug.WriteLine(num);
+			for (var i = 0; i < 10; i++)
+			{
+				Assert.IsFalse(firstPass[i] == secondPass[i] && firstPass[i] == thirdPass[i]);
+			}
+		}
 
-            }
+		[TestMethod]
+		public void Int_TestRandomSmallRange_IsOk()
+		{
+			for (var i = 0; i < 10; i++)
+			{
+				var num = TestHelper.Data.Int(1, 3);
+				Debug.WriteLine(num);
+			}
+		}
 
-            Debug.WriteLine("3rd Pass");
-            
-            for (int i = 0; i < 10; i++)
-            {
-                num = TestHelper.Data.Int(1, 10);
-                thirdPass.Add(num);
-                Debug.WriteLine(num);
-
-            }
-
-            for (int i = 0; i < 10; i++)
-            {
-                Assert.IsFalse(firstPass[i] == secondPass[i] && firstPass[i] == thirdPass[i]);
-            }
-        }
-
-        [TestMethod]
-        public void TestRandomSmallRange()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                int num = TestHelper.Data.Int(1, 3);
-                Debug.WriteLine(num);
-               
-                
-            }
-        }
-        [TestMethod]
-        public void TestRandomModerateRange()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                int num = TestHelper.Data.Int(1, 100);
-                Debug.WriteLine(num);                
-            }
-        }
-
-      
-         
-    }
+		[TestMethod]
+		public void Int_TestRandomModerateRange_IsOk()
+		{
+			for (var i = 0; i < 10; i++)
+			{
+				var num = TestHelper.Data.Int(1, 100);
+				Debug.WriteLine(num);
+			}
+		}
+	}
 }
