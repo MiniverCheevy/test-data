@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Voodoo.TestData.Models;
 
 namespace Voodoo.TestData.Builders
 {
@@ -10,8 +11,8 @@ namespace Voodoo.TestData.Builders
 			var num = 0;
 			var length = 0;
 
-			num = TestHelper.Data.Int(0, randomData.zipCodes.Count - 1);
-			var csz = randomData.zipCodes[num];
+			num = TestHelper.Data.Int(0, randomData.ZipCodes.Count - 1);
+			var csz = randomData.ZipCodes[num];
 			toReturn.City = csz.City;
 			toReturn.County = csz.County;
 			toReturn.ZipCode = csz.ZipCode;
@@ -49,19 +50,19 @@ namespace Voodoo.TestData.Builders
 			sb.Append(TestHelper.Data.NumericString(length - 1));
 			sb.Append(" ");
 
-			sb.Append(randomData.streetParts1.RandomElement());
+			sb.Append(randomData.StreetParts1.RandomElement());
 			sb.Append(" ");
 
-			sb.Append(randomData.streetParts2.RandomElement());
+			sb.Append(randomData.StreetParts2.RandomElement());
 			sb.Append(" ");
 
-			sb.Append(randomData.streetParts3.RandomElement());
+			sb.Append(randomData.StreetParts3.RandomElement());
 			sb.Append(" ");
 
 			toReturn.Address1 = sb.ToString();
 
 			if (TestHelper.Data.Int(1, 9) > 6)
-				toReturn.Address2 = string.Format("{0} {1}", randomData.address2Parts.RandomElement(),
+				toReturn.Address2 = string.Format("{0} {1}", randomData.Address2Parts.RandomElement(),
 					TestHelper.Data.Int(1, 10000));
 
 

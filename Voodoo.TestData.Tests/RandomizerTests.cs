@@ -1,9 +1,11 @@
 ﻿using System;
+using FluentAssertions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Voodoo.TestData;
 using Voodoo.TestData.Strategy.TypeStrategy;
+using Voodoo.TestData.Tests.TestClasses;
 
-namespace VoodooTestDataTest
+namespace Voodoo.TestData.Tests
 {
 	[TestClass]
 	public class RandomizerTests
@@ -13,7 +15,7 @@ namespace VoodooTestDataTest
 		{
 			var target = new ClassWithEnum();
 			TestHelper.Randomizer.Randomize(target);
-			Assert.AreNotEqual(default(DayOfWeek), target.Day);
+			Assert.AreNotEqual(default(DayOfWeek?), target.Day);
 		}
 
 		[TestMethod]
@@ -48,9 +50,11 @@ namespace VoodooTestDataTest
 		[TestMethod]
 		public void Randomizer_ArbitraryClass_IsOk()
 		{
-			var subject = new Order();
+			var subject = new OrderDetail();
 			TestHelper.Randomizer.Randomize(subject);
-			Assert.IsNotNull(subject.Freight);
+			subject.UnitPrice.Should().NotBe(default(decimal));
+			subject.Quantity.Should().NotBe(default(short));
+			subject.Discount.Should().NotBe(default(float));			
 		}
 
 		[TestMethod]

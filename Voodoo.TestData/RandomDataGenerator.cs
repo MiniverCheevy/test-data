@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Text;
 using Voodoo.TestData.Builders;
+using Voodoo.TestData.Models;
 
 namespace Voodoo.TestData
 {
@@ -14,10 +15,7 @@ namespace Voodoo.TestData
 
 		public RandomSeedData RandomData { get; set; }
 
-		private Random rnd
-		{
-			get { return TestHelper.Random; }
-		}
+		private Random rnd => TestHelper.Random;
 
 		public RandomPerson Person()
 		{
@@ -31,17 +29,17 @@ namespace Voodoo.TestData
 
 		public string Grocery()
 		{
-			return RandomData.groceries.RandomElement();
+			return RandomData.Groceries.RandomElement();
 		}
 
 		public string GetAdjective()
 		{
-			return RandomData.adjectives.RandomElement();
+			return RandomData.Adjectives.RandomElement();
 		}
 
 		public string GetComment()
 		{
-			return RandomData.adjectives.RandomElement();
+			return RandomData.Adjectives.RandomElement();
 		}
 
 		public int Int(int minVal, int maxVal)
@@ -99,8 +97,8 @@ namespace Voodoo.TestData
 
 		public string Characters(int lenght)
 		{
-			var startNum = 32;
-			var endNum = 47;
+			const int startNum = 32;
+			const int endNum = 47;
 			var sb = new StringBuilder();
 			for (var i = 0; i <= lenght - 1; i++)
 			{
@@ -151,23 +149,21 @@ namespace Voodoo.TestData
 			return phoneNumber;
 		}
 
-		public string Text(int minLength = 0, int maxLength = int.MaxValue)
+		public string Text(int minLength = 0, int maxLength = Int16.MaxValue)
 		{
-			var query = RandomData.comments.AsQueryable();
+			var query = RandomData.Comments.AsQueryable();
 			if (minLength != 0)
 				query = query.Where(c => c.Length >= minLength);
-			if (maxLength != int.MaxValue)
+			if (maxLength != Int16.MaxValue)
 				query = query.Where(c => c.Length <= maxLength);
 
 			query = query.OrderBy(c => Guid.NewGuid());
 
 			var result = query.FirstOrDefault();
-			if (result == null)
-				return LoremIpssum(minLength, maxLength);
-			return result;
+			return result ?? LoremIpssum(minLength, maxLength);
 		}
 
-		public string LoremIpssum(int minLength = 0, int maxLength = int.MaxValue)
+		public string LoremIpssum(int minLength = 0, int maxLength = Int16.MaxValue)
 		{
 			//TODO: jumble
 			var min = minLength;
@@ -179,7 +175,7 @@ namespace Voodoo.TestData
 			if (max >= lorem)
 				max = lorem;
 
-			if (maxLength == int.MaxValue)
+			if (maxLength == Int16.MaxValue)
 				max = TestHelper.Data.Int(min, max);
 
 			var result = RandomData.LoremIpsum.Substring(0, max);

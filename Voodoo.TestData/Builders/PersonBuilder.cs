@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Voodoo.TestData.Models;
 
 namespace Voodoo.TestData.Builders
 {
@@ -37,14 +38,14 @@ namespace Voodoo.TestData.Builders
 
 			List<string> nameList;
 			if (result.Gender == Gender.Male)
-				nameList = RandomData.firstMale;
+				nameList = RandomData.FirstMale;
 			else
-				nameList = RandomData.firstFemale;
+				nameList = RandomData.FirstFemale;
 
 			result.FirstName = nameList.RandomElement();
 
 
-			result.LastName = RandomData.lastNames.RandomElement();
+			result.LastName = RandomData.LastNames.RandomElement();
 
 			result.Address = new AddressBuilder().Build(RandomData);
 			var minYear = 0;

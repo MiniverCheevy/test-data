@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
+using Voodoo.TestData.Models;
 
 namespace Voodoo.TestData.Strategy.TypeStrategy
 {
 	public class DefaultStringGenerationStrategy : GenerationByTypeStrategy<string>
 	{
-		public const string SSN = "SSN";
+		public const string Ssn = "SSN";
 		public const string FirstName = "FirstName";
 		public const string LastName = "LastName";
 		public const string MiddleInitial = "MiddleInitial";
@@ -65,13 +66,6 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
 			return listOfAttributes.ToArray();
 		}
 
-		//RangeAttribute 
-		//StringLengthAttribute 
-
-
-		//mvc data-val DataAnnotationsModelValidatorProvider
-
-
 		public override string GenerateValue()
 		{
 			throw new NotImplementedException();
@@ -80,45 +74,36 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
 		public override void SetValue(object @object, PropertyInfo info)
 		{
 			var name = info.Name;
-			var value = string.Format("{0} {1}", Generator.GetAdjective(), Generator.Grocery());
-			SetPropertyValue(@object, info, value);
-			foreach (var item in TestHelper.Data.RandomData.autofill)
+			var stringValue = string.Format("{0} {1}", Generator.GetAdjective(), Generator.Grocery());
+			SetPropertyValue(@object, info, stringValue);
+			foreach (var item in TestHelper.Data.RandomData.Autofill)
 			{
-				if (HasMatch(name, item.Value))
-				{
-					chooseValue(@object, info, item.Key);
-					break;
-				}
+				if (!HasMatch(name, item.Value))
+					continue;
+				chooseValue(@object, info, item.Key);
+				break;
 			}
-			var stringValue = value;
 
 			var stringLength = GetStringLength(info);
 			var range = GetRangeAttribute(info);
 
-			//TODO build this in so values aren't set multiple times
-			if (stringLength != null)
-			{
-				var max = stringLength.MaximumLength == 0 ? int.MaxValue : stringLength.MaximumLength;
+			if (stringLength == null)
+				return;
 
-				if (stringValue.Length > max)
-				{
-					stringValue = stringValue.Substring(0, max);
-					SetPropertyValue(@object, info, stringValue);
-				}
-			}
-			if (range != null)
-			{
-				var newValue = RangeGenerationStrategyFactory.GetStrategyForRangeAttribute(range);
-				if (newValue != null)
-					SetPropertyValue(@object, info, newValue.ToString());
-			}
+			stringValue = TestHelper.Data.GetComment();
+			var max = stringLength.MaximumLength == 0 ? Int16.MaxValue : stringLength.MaximumLength;
+
+			if (stringValue.Length <= max)
+				return;
+			stringValue = stringValue.Substring(0, max);
+			SetPropertyValue(@object, info, stringValue);
 		}
 
 		private void chooseValue(object @object, PropertyInfo info, string key)
 		{
 			switch (key)
 			{
-				case SSN:
+				case Ssn:
 					SetPropertyValue(@object, info, Person.SSN);
 					break;
 				case FirstName:

@@ -17,11 +17,7 @@ namespace Voodoo.TestData
 			{
 				lock (locker)
 				{
-					if (randomizer == null)
-					{
-						randomizer = new Randomizer();
-					}
-					return randomizer;
+					return randomizer ?? (randomizer = new Randomizer());
 				}
 			}
 		}
@@ -32,11 +28,7 @@ namespace Voodoo.TestData
 			{
 				lock (locker)
 				{
-					if (generator == null)
-					{
-						generator = new RandomDataGenerator();
-					}
-					return generator;
+					return generator ?? (generator = new RandomDataGenerator());
 				}
 			}
 		}
@@ -47,33 +39,8 @@ namespace Voodoo.TestData
 			{
 				lock (locker)
 				{
-					if (random == null)
-					{
-						random = new Random();
-					}
-					return random;
+					return random ?? (random = new Random());
 				}
-			}
-		}
-
-		//private static void init()
-		//{
-		//    if (_random == null)
-		//        SetRandomDataSeed(12345);
-
-		//    if (_generator == null)
-		//        _generator = new RandomDataGenerator();
-		//}
-
-		//http://stackoverflow.com/questions/1287567/is-using-random-and-orderby-a-good-shuffle-algorithm
-		public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> source)
-		{
-			var elements = source.ToArray();
-			for (var i = elements.Length - 1; i >= 0; i--)
-			{
-				var swapIndex = Random.Next(i + 1);
-				yield return elements[swapIndex];
-				elements[swapIndex] = elements[i];
 			}
 		}
 

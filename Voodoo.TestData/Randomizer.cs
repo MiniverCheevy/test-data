@@ -5,6 +5,7 @@ using System.Reflection;
 using Voodoo.TestData.Strategy;
 using Voodoo.TestData.Strategy.NameStrategy;
 using Voodoo.TestData.Strategy.TypeStrategy;
+using Voodoo.TestData.Strategy.TypeStrategy.PrimitiveStrategy;
 
 namespace Voodoo.TestData
 {
@@ -33,10 +34,7 @@ namespace Voodoo.TestData
 		protected List<GenerationStrategy> TypeStrategies { get; set; }
 		protected List<GenerationByNameStrategy> NameStrategies { get; set; }
 
-		internal static RandomDataGenerator RandomData
-		{
-			get { return _gen ?? (_gen = new RandomDataGenerator()); }
-		}
+		internal static RandomDataGenerator RandomData => _gen ?? (_gen = new RandomDataGenerator());
 
 		public void AddOrReplaceTypeStrategy<T>(GenerationByTypeStrategy<T> strategy)
 		{
@@ -62,14 +60,11 @@ namespace Voodoo.TestData
 		public void Randomize(object @object)
 		{
 			var existing = TypeStrategies.FirstOrDefault(c => c is DefaultStringGenerationStrategy);
-			if (existing != null)
+			var stringStrategy = existing as DefaultStringGenerationStrategy;
+			if (stringStrategy != null)
 			{
-				var stringStrategy = (existing as DefaultStringGenerationStrategy);
-				if (stringStrategy != null)
-				{
-					stringStrategy.Person = TestHelper.Data.Person();
-					AddOrReplaceTypeStrategy(stringStrategy);
-				}
+				stringStrategy.Person = TestHelper.Data.Person();
+				AddOrReplaceTypeStrategy(stringStrategy);
 			}
 
 			var type = @object.GetType();
@@ -115,7 +110,6 @@ namespace Voodoo.TestData
 					var value = values.RandomElement();
 					info.SetValue(@object, value, null);
 				}
-
 			}
 		}
 	}

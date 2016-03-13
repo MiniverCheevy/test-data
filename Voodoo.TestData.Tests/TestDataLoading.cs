@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Voodoo.TestData;
 using Voodoo.TestData.Builders;
 
-namespace Voodoo.TestDataTest
+namespace Voodoo.TestData.Tests
 {
 	/// <summary>
 	///     Summary description for TestDataLoading
@@ -11,36 +11,35 @@ namespace Voodoo.TestDataTest
 	[TestClass]
 	public class TestDataLoading
 	{
-
 		[TestMethod]
 		public void TestLoading()
 		{
 			var data = new RandomSeedData();
 
-			Assert.AreNotEqual(0, data.zipCodes.Count);
-			Assert.AreNotEqual(0, data.firstMale.Count);
-			Assert.AreNotEqual(0, data.firstFemale.Count);
-			Assert.AreNotEqual(0, data.lastNames.Count);
-			Assert.AreNotEqual(0, data.streetParts1.Count);
-			Assert.AreNotEqual(0, data.streetParts2.Count);
-			Assert.AreNotEqual(0, data.streetParts3.Count);
-			Assert.AreNotEqual(0, data.zipCodes.Count);
+			Assert.AreNotEqual(0, data.ZipCodes.Count);
+			Assert.AreNotEqual(0, data.FirstMale.Count);
+			Assert.AreNotEqual(0, data.FirstFemale.Count);
+			Assert.AreNotEqual(0, data.LastNames.Count);
+			Assert.AreNotEqual(0, data.StreetParts1.Count);
+			Assert.AreNotEqual(0, data.StreetParts2.Count);
+			Assert.AreNotEqual(0, data.StreetParts3.Count);
+			Assert.AreNotEqual(0, data.ZipCodes.Count);
 
-			Assert.AreNotEqual(0, data.adjectives.Count);
-			Assert.AreNotEqual(0, data.bussiness.Count);
-			Assert.AreNotEqual(0, data.comments.Count);
-			Assert.AreNotEqual(0, data.groceries.Count);
-			Assert.AreNotEqual(0, data.industry.Count);
+			Assert.AreNotEqual(0, data.Adjectives.Count);
+			Assert.AreNotEqual(0, data.Bussiness.Count);
+			Assert.AreNotEqual(0, data.Comments.Count);
+			Assert.AreNotEqual(0, data.Groceries.Count);
+			Assert.AreNotEqual(0, data.Industry.Count);
 			Assert.AreNotEqual(0, data.LoremIpsum.Length);
 
 
-			Debug.WriteLine("zipCodes:" + data.zipCodes.Count);
-			Debug.WriteLine("firstMale:" + data.firstMale.Count);
-			Debug.WriteLine("firstFemale:" + data.firstFemale.Count);
-			Debug.WriteLine("lastNames:" + data.lastNames.Count);
-			Debug.WriteLine("streetParts1:" + data.streetParts1.Count);
-			Debug.WriteLine("streetParts2:" + data.streetParts2.Count);
-			Debug.WriteLine("streetParts3:" + data.streetParts3.Count);
+			Debug.WriteLine("zipCodes:" + data.ZipCodes.Count);
+			Debug.WriteLine("firstMale:" + data.FirstMale.Count);
+			Debug.WriteLine("firstFemale:" + data.FirstFemale.Count);
+			Debug.WriteLine("lastNames:" + data.LastNames.Count);
+			Debug.WriteLine("streetParts1:" + data.StreetParts1.Count);
+			Debug.WriteLine("streetParts2:" + data.StreetParts2.Count);
+			Debug.WriteLine("streetParts3:" + data.StreetParts3.Count);
 		}
 
 		[TestMethod]

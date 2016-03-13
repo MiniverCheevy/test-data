@@ -3,12 +3,11 @@ using System.Diagnostics;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Voodoo.TestData;
 
-namespace VoodooTestDataTest
+namespace Voodoo.TestData.Tests
 {
 	[TestClass]
 	public class RandomTest
 	{
-		
 		[TestMethod]
 		public void SetRandomDataSeed_TestSettingSeed_CausesTheSameValuesToBeGeneratede()
 		{

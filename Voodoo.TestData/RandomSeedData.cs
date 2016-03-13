@@ -2,49 +2,34 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using Voodoo.TestData.Models;
 
 namespace Voodoo.TestData
 {
 	public class RandomSeedData
 	{
-		public List<string> address2Parts = new List<string>();
-		public List<string> adjectives = new List<string>();
-		public Dictionary<string, string[]> autofill = new Dictionary<string, string[]>();
-		public List<string> bussiness = new List<string>();
-		public List<string> comments = new List<string>();
-		public List<string> firstFemale = new List<string>();
-		public List<string> firstMale = new List<string>();
-		public List<string> groceries = new List<string>();
-		public List<string> industry = new List<string>();
-		public List<string> lastNames = new List<string>();
-		public string LoremIpsum;
-		public List<string> prefixFemale = new List<string>();
-		public List<string> prefixMale = new List<string>();
-		public List<string> streetParts1 = new List<string>();
-		public List<string> streetParts2 = new List<string>();
-		public List<string> streetParts3 = new List<string>();
-		public List<string> suffix = new List<string>();
-		public List<string> usedNames = new List<string>();
-		public List<CityStateZip> zipCodes = new List<CityStateZip>();
-
 		public RandomSeedData()
 		{
 			var path = Environment.CurrentDirectory;
-			lastNames = ReadFileLineByLine("last.txt");
-			firstMale = ReadFileLineByLine("male.txt");
-			firstFemale = ReadFileLineByLine("female.txt");
-			comments = ReadFileLineByLine("comment.txt");
-			bussiness = ReadFileLineByLine("business.txt");
-			industry = ReadFileLineByLine("Industry.txt");
-			adjectives = ReadFileLineByLine("Adjective.txt");
-			groceries = ReadFileLineByLine("grocery.txt");
+			LastNames = ReadFileLineByLine("last.txt");
+			FirstMale = ReadFileLineByLine("male.txt");
+			FirstFemale = ReadFileLineByLine("female.txt");
+			Comments = ReadFileLineByLine("comment.txt");
+			Bussiness = ReadFileLineByLine("business.txt");
+			Industry = ReadFileLineByLine("Industry.txt");
+			Adjectives = ReadFileLineByLine("Adjective.txt");
+			Groceries = ReadFileLineByLine("grocery.txt");
 			LoremIpsum = ReadFile("LoremIpsum.txt");
-			address2Parts = ReadFileLineByLine("AddressLine2.txt");
-
+			Address2Parts = ReadFileLineByLine("AddressLine2.txt");
+			ZipCodes = new List<CityStateZip>();
+			StreetParts1 = new List<string>();
+			StreetParts2 = new List<string>();
+			StreetParts3 = new List<string>();
+			Autofill = new Dictionary<string, string[]>();
 			var zipTemp = ReadFileLineByLine("zip5.txt");
 			foreach (var s in zipTemp)
 			{
-				zipCodes.Add(new CityStateZip(s));
+				ZipCodes.Add(new CityStateZip(s));
 			}
 
 
@@ -52,9 +37,9 @@ namespace Voodoo.TestData
 			foreach (var s in streetTemp)
 			{
 				var ary = s.Split(',');
-				streetParts1.Add(ary[0]);
-				streetParts2.Add(ary[1]);
-				streetParts3.Add(ary[2]);
+				StreetParts1.Add(ary[0]);
+				StreetParts2.Add(ary[1]);
+				StreetParts3.Add(ary[2]);
 			}
 
 			var config = ReadFileLineByLine("AutoFill.txt");
@@ -71,10 +56,30 @@ namespace Voodoo.TestData
 						trimmed.Add(element.ToLower().Trim());
 					}
 					trimmed.Add(key.ToLower());
-					autofill.Add(key, trimmed.ToArray());
+					Autofill.Add(key, trimmed.ToArray());
 				}
 			}
 		}
+
+		public List<string> Address2Parts { get; set; }
+		public List<string> Adjectives { get; set; }
+		public Dictionary<string, string[]> Autofill { get; set; }
+		public List<string> Bussiness { get; set; }
+		public List<string> Comments { get; set; }
+		public List<string> FirstFemale { get; set; }
+		public List<string> FirstMale { get; set; }
+		public List<string> Groceries { get; set; }
+		public List<string> Industry { get; set; }
+		public List<string> LastNames { get; set; }
+		public string LoremIpsum { get; set; }
+		public List<string> PrefixFemale { get; set; }
+		public List<string> PrefixMale { get; set; }
+		public List<string> StreetParts1 { get; set; }
+		public List<string> StreetParts2 { get; set; }
+		public List<string> StreetParts3 { get; set; }
+		public List<string> Suffix { get; set; }
+		public List<string> UsedNames { get; set; }
+		public List<CityStateZip> ZipCodes { get; set; }
 
 		public string ReadFile(string name)
 		{
@@ -114,39 +119,6 @@ namespace Voodoo.TestData
 				}
 			}
 			return ret;
-		}
-	}
-
-	public enum Gender
-	{
-		Male = 1,
-		Female = 2
-	};
-
-	public enum AgeRange
-	{
-		Child = 1,
-		Adult = 2
-	};
-
-	public struct CityStateZip
-	{
-		public string City;
-		public string County;
-		public decimal Latitude;
-		public decimal Longitude;
-		public string State;
-		public string ZipCode;
-
-		public CityStateZip(string s)
-		{
-			var ary = s.Split(',');
-			ZipCode = ary[0];
-			City = ary[1];
-			State = ary[2];
-			Latitude = decimal.Parse(ary[3]);
-			Longitude = decimal.Parse(ary[4]);
-			County = ary[5];
 		}
 	}
 }

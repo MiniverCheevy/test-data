@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using Voodoo.TestData.Strategy.TypeStrategy.PrimitiveStrategy;
 
 namespace Voodoo.TestData.Strategy.TypeStrategy
 {
@@ -17,63 +18,63 @@ namespace Voodoo.TestData.Strategy.TypeStrategy
 				return
 					new ByteStrategy
 					{
-						MinValue = min == null ? byte.MinValue : (byte) min,
-						MaxValue = max == null ? byte.MinValue : (byte) max
+						MinValue = min?.To<byte>() ?? byte.MinValue,
+						MaxValue = max?.To<byte>() ?? byte.MaxValue
 					}.GenerateValue();
 			if (test is short)
 				return
 					new ShortStrategy
 					{
-						MinValue = min == null ? short.MinValue : (short) min,
-						MaxValue = max == null ? short.MaxValue : (short) max
+						MinValue = min?.To<short>() ?? short.MinValue,
+						MaxValue = max?.To<short>() ?? short.MaxValue,
 					}.GenerateValue();
 
 			if (test is int)
 				return
 					new IntStrategy
 					{
-						MinValue = min == null ? int.MinValue : (int) min,
-						MaxValue = max == null ? int.MaxValue : (int) max
+						MinValue = min?.To<int>() ?? int.MinValue,
+						MaxValue = max?.To<int>() ?? Int16.MaxValue
 					}.GenerateValue();
 
 			if (test is long)
 				return
 					new LongStrategy
 					{
-						MinValue = min == null ? long.MinValue : (long) min,
-						MaxValue = max == null ? long.MaxValue : (long) max
+						MinValue = min?.To<long>() ?? long.MinValue,
+						MaxValue = max?.To<long>() ?? long.MaxValue
 					}.GenerateValue();
 
 			if (test is float)
 				return
 					new SingleStrategy
 					{
-						MinValue = min == null ? float.MinValue : (float) min,
-						MaxValue = max == null ? float.MaxValue : (float) max
+						MinValue = min?.To<float>() ?? float.MinValue,
+						MaxValue = max?.To<float>() ?? float.MaxValue
 					}.GenerateValue();
 
 			if (test is double)
 				return
 					new DoubleStrategy
 					{
-						MinValue = min == null ? double.MinValue : (double) min,
-						MaxValue = max == null ? double.MaxValue : (double) max
+						MinValue = min?.To<double>() ?? double.MinValue,
+						MaxValue = max?.To<double>() ?? double.MaxValue
 					}.GenerateValue();
 
 			if (test is decimal)
 				return
 					new DecimalStrategy
 					{
-						MinValue = min == null ? decimal.MinValue : (decimal) min,
-						MaxValue = max == null ? decimal.MaxValue : (decimal) max
+						MinValue = min?.To<decimal>() ?? decimal.MinValue,
+						MaxValue = max?.To<decimal>() ?? decimal.MaxValue
 					}.GenerateValue();
 
 			if (test is DateTime)
 				return
 					new DateStrategy
 					{
-						MinValue = min == null ? DateTime.Parse("1/1/1950") : (DateTime) min,
-						MaxValue = max == null ? DateTime.Parse("1/1/2050") : (DateTime) max
+						MinValue = min?.To<DateTime>() ?? DateTime.Parse("1/1/1950"),
+						MaxValue = max?.To<DateTime>() ?? DateTime.Parse("1/1/2050")
 					}.GenerateValue();
 
 

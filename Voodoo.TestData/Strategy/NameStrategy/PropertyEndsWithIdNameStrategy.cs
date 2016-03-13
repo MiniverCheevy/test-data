@@ -4,10 +4,7 @@ namespace Voodoo.TestData.Strategy.NameStrategy
 {
 	public class PropertyEndsWithIdNameStrategy : GenerationByNameStrategy<int>
 	{
-		public override int SortOrder
-		{
-			get { return 4; }
-		}
+		public override int SortOrder => 4;
 
 		public override bool Matches(PropertyInfo info)
 		{

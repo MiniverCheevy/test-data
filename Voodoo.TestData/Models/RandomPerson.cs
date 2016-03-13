@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Voodoo.TestData
+namespace Voodoo.TestData.Models
 {
 	public class RandomPerson
 	{

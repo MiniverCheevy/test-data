@@ -33,5 +33,5 @@ _ReSharper.*
 *.rar
 *.tar
 *.zip
- 
+ *.nupkg
 
