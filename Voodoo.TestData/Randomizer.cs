@@ -103,10 +103,11 @@ namespace Voodoo.TestData
 					typeStrategy.SetValue(@object, info);
 					continue;
 				}
-
-				if (info.PropertyType.IsEnum)
+				var nullableType = Nullable.GetUnderlyingType(info.PropertyType);
+				if (info.PropertyType.IsEnum || (nullableType != null && nullableType.IsEnum))
 				{
-					var values = Enum.GetValues(info.PropertyType);
+					var enumType = nullableType ?? info.PropertyType;
+					var values = Enum.GetValues(enumType);
 					var value = values.RandomElement();
 					info.SetValue(@object, value, null);
 				}

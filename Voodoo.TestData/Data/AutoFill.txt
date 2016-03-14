@@ -3,7 +3,6 @@ FirstName:given-name,firstname,fname,first,givenName
 LastName:family-name,lastname,lname,last,SN
 MiddleInitial:middle-initial,additional-name-initial,middleinitial
 MiddleName:middle-name,additional-name,middlename,middle,mname
-Prefix:honorific-prefix,prefix,title
 EmailAddress:email,userPrincipalName,username,userid
 Address2:street-address2,address-line2,address2,addy2,streetAddress2
 Address1:street-address,address-line1,address,addy,streetAddress

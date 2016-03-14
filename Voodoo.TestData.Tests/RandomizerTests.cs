@@ -54,7 +54,8 @@ namespace Voodoo.TestData.Tests
 			TestHelper.Randomizer.Randomize(subject);
 			subject.UnitPrice.Should().NotBe(default(decimal));
 			subject.Quantity.Should().NotBe(default(short));
-			subject.Discount.Should().NotBe(default(float));			
+			subject.Discount.Should().NotBe(default(float));
+			subject.Title.Should().NotBe(default(string));
 		}
 
 		[TestMethod]

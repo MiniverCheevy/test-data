@@ -9,5 +9,7 @@ namespace Voodoo.TestData.Tests.TestClasses
 		public float Discount { get; set; }
 		public Order Orders { get; set; }
 		public virtual Product Product { get; set; }
+
+		public string Title { get; set; }
 	}
 }
