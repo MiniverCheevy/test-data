@@ -57,12 +57,12 @@ namespace Voodoo.TestData
 			return num;
 		}
 
-		public string GibberishText(int lenght)
+		public string GibberishText(int length)
 		{
 			const int startNum = 97;
 			const int endNum = 122;
 			var sb = new StringBuilder();
-			for (var i = 0; i <= lenght - 1; i++)
+			for (var i = 0; i <= length - 1; i++)
 			{
 				var num = Int(startNum, endNum);
 				var c = ((char) num);
@@ -78,12 +78,12 @@ namespace Voodoo.TestData
 			return num == 1;
 		}
 
-		public string TextWithFunkySymbols(int lenght)
+		public string TextWithFunkySymbols(int length)
 		{
 			var startNum = 32;
 			var endNum = 126;
 			var sb = new StringBuilder();
-			for (var i = 0; i <= lenght - 1; i++)
+			for (var i = 0; i <= length - 1; i++)
 			{
 				var temp = ((char) Int(startNum, endNum)).ToString();
 				while ((temp.Equals(">")) || (temp.Equals("<")))
@@ -95,12 +95,12 @@ namespace Voodoo.TestData
 			return sb.ToString();
 		}
 
-		public string Characters(int lenght)
+		public string Characters(int length)
 		{
 			const int startNum = 32;
 			const int endNum = 47;
 			var sb = new StringBuilder();
-			for (var i = 0; i <= lenght - 1; i++)
+			for (var i = 0; i <= length - 1; i++)
 			{
 				var temp = ((char) Int(startNum, endNum)).ToString();
 				while ((temp.Equals(">")) || (temp.Equals("<")))
