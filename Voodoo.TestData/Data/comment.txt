@@ -263,3 +263,4 @@ You only live once, but if you do it right, once is enough.
 Your mother was a hamster and your father smelt of elderberries.  Now go away, or I shall taunt you a second time.
 As we know, There are known knowns. There are things we know we know. We also know There are known unknowns. That is to say We know there are some things We do not know. But there are also unknown unknowns, The ones we don’t know We don’t know.
 There are 2 hard problems in computer science: caching, naming, and off-by-1 errors
+It’s much easier to recover from no abstraction than the wrong abstraction.

@@ -1,2 +1,1 @@
-nuget spec
-nuget pack Voodoo.TestData.csproj
+nuget pack Voodoo.TestData.nuspec

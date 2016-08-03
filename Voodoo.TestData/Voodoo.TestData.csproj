@@ -160,6 +160,8 @@
   <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Data\AddressLine2.txt" />
+    <Content Include="Data\corporate.txt" />
+    <Content Include="Data\star-trek.txt" />
     <Content Include="license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
