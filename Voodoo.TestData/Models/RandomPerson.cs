@@ -6,56 +6,7 @@ namespace Voodoo.TestData.Models
 {
 	public class RandomPerson
 	{
-		public override string ToString()
-		{
-			var sb = new StringBuilder();
-			sb.Append(FullName);
-			sb.Append(" ");
-			sb.Append(Gender);
-			sb.Append(" ");
-			sb.Append(AgeRange);
-			sb.Append(" ");
-			sb.Append(BirthDay.ToShortDateString());
-			sb.Append(" ");
-			sb.Append(SSN);
-			sb.Append(" ");
-			sb.Append(Address);
-
-			return sb.ToString();
-		}
-
-		public Dictionary<string, string> ToHash()
-		{
-			var hash = new Dictionary<string, string>();
-
-			hash.Add("BirthDay", "");
-			hash.Add("EmailAddress", EmailAddress);
-			hash.Add("FirstName", FirstName);
-			hash.Add("FullName", FullName);
-			hash.Add("Gender", Gender.ToString());
-			hash.Add("Initials", Initials);
-			hash.Add("LastName", LastName);
-			hash.Add("MiddleInitial", MiddleInitial.ToString());
-			hash.Add("MiddleName", MiddleName);
-			hash.Add("Prefix", Prefix);
-			hash.Add("SSN", SSN);
-			hash.Add("Suffix", Suffix);
-			hash.Add("Address1", Address.Address1);
-			hash.Add("City", Address.City);
-			hash.Add("County", Address.County);
-			hash.Add("Latitude", Address.Latitude.ToString());
-			hash.Add("Longitude", Address.Longitude.ToString());
-			hash.Add("State", Address.State);
-			hash.Add("ZipCode", Address.ZipCode);
-			return hash;
-		}
-
-		#region Fields
-
-		#endregion
-
-		#region Properties
-
+		public override string ToString() => this.ToDebugString();
 		public Gender Gender { get; set; }
 		public AgeRange AgeRange { get; set; }
 		public string EmailAddress { get; set; }
@@ -199,6 +150,16 @@ namespace Voodoo.TestData.Models
 
 		public string Prefix { get; set; } = string.Empty;
 
-		#endregion
+		//public Department Department { get; set; }
+		public int? DivisionId { get; set; }
+		//public Division Division { get; set; }
+		
+		//public List<User> Supervisors { get; set; }
+		//public List<User> DirectReports { get; set; }
+		public string EmployeeNumber { get; set; }
+		public DateTime? HireDate { get; set; }
+		public string JobTitle { get; set; }		
+		public bool IsActive { get; set; }
+
 	}
 }

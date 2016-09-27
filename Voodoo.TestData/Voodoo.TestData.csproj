@@ -60,6 +60,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core">
@@ -88,6 +89,7 @@
     <Compile Include="Adapters\SqlServerAdapter.cs" />
     <Compile Include="Builders\AddressBuilder.cs" />
     <Compile Include="Builders\PersonBuilder.cs" />
+    <Compile Include="MappingTestHelper.cs" />
     <Compile Include="Models\AgeRange.cs" />
     <Compile Include="Models\CityStateZip.cs" />
     <Compile Include="Models\DataTarget.cs" />
@@ -126,6 +128,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="TestData.snk" />
+    <None Include="Voodoo.TestData.nuspec" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Data\Adjective.txt" />
@@ -157,12 +160,10 @@
   <ItemGroup>
     <EmbeddedResource Include="Data\LoremIpsum.txt" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Data\AddressLine2.txt" />
     <Content Include="Data\corporate.txt" />
     <Content Include="Data\star-trek.txt" />
-    <Content Include="license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
