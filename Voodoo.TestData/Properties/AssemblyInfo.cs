@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyVersion("1.0.15")]
+[assembly: AssemblyVersion("1.0.16")]
 [assembly: AssemblyFileVersion("1.0.15")]
 [assembly: AssemblyTitle("Voodoo.TestData")]
 [assembly:

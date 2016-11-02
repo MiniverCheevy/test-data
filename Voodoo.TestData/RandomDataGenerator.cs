@@ -31,18 +31,33 @@ namespace Voodoo.TestData
 		{
 			return RandomData.Groceries.RandomElement();
 		}
-
+        [Obsolete("Inconsistent naming, use Adjective")]
 		public string GetAdjective()
 		{
 			return RandomData.Adjectives.RandomElement();
 		}
 
-		public string GetComment()
+        public string Adjective()
+        {
+            return RandomData.Adjectives.RandomElement();
+        }
+        public string SmallText()
+        {
+            return string.Format("{0} {1}", GetAdjective(), Grocery());
+        }
+
+        [Obsolete("Inconsistent naming, use Comment")]
+        public string GetComment()
 		{
 			return RandomData.Adjectives.RandomElement();
 		}
+        
+        public string Comment()
+        {
+            return RandomData.Adjectives.RandomElement();
+        }
 
-		public int Int(int minVal, int maxVal)
+        public int Int(int minVal, int maxVal)
 		{
 			var num = rnd.Next(minVal, maxVal);
 			if (num > maxVal)
