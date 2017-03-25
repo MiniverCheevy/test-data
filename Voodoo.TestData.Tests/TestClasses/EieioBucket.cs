@@ -3,22 +3,22 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Voodoo.TestData.Tests.TestClasses
 {
-	[MetadataType(typeof (EieioWellMetadata))]
-	public class EieioWell
+	[MetadataType(typeof (EieioBucketMetadata))]
+	public class EieioBucket
 	{
-		public virtual Guid EieioWellId { get; set; }
+		public virtual Guid EieioBucketId { get; set; }
 		public virtual Guid EieioRigId { get; set; }
 
 		[StringLength(64)]
-		public virtual string WellName { get; set; }
+		public virtual string BucketName { get; set; }
 
 		[StringLength(20)]
-		public virtual string WellNumber { get; set; }
+		public virtual string BucketNumber { get; set; }
 
 		public virtual int JobNumber { get; set; }
 
 		[StringLength(18)]
-		public virtual string ApiWellNumber { get; set; }
+		public virtual string ApiBucketNumber { get; set; }
 
 		[StringLength(20)]
 		public virtual string Lease { get; set; }
@@ -49,7 +49,7 @@ namespace Voodoo.TestData.Tests.TestClasses
 		public virtual string Country { get; set; }
 
 		public virtual bool IsDeleted { get; set; }
-		public virtual short WellStatus { get; set; }
+		public virtual short BucketStatus { get; set; }
 		public virtual bool? TightHole { get; set; }
 		public virtual DateTime? FirstReportDate { get; set; }
 		public virtual bool? IsTwoTour { get; set; }

@@ -2,7 +2,7 @@ using System;
 
 namespace Voodoo.TestData.Tests.TestClasses
 {
-	public class WellData
+	public class BucketlData
 	{
 		public Guid WellId { get; set; }
 		public Guid RigId { get; set; }

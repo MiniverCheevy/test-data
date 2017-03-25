@@ -77,9 +77,8 @@
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="Voodoo.Patterns, Version=2.1.14.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Voodoo.Patterns.2.1.14\lib\net40\Voodoo.Patterns.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="Voodoo, Version=2.2.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Voodoo.Patterns.2.2.17\lib\net40\Voodoo.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -88,14 +87,14 @@
     <Compile Include="RandomTest.cs" />
     <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\PrimitiveGenerrationTests.cs" />
     <Compile Include="TestClasses\ClassWithEnum.cs" />
-    <Compile Include="TestClasses\EieioWell.cs" />
-    <Compile Include="TestClasses\EieioWellMetadata.cs" />
+    <Compile Include="TestClasses\EieioBucket.cs" />
+    <Compile Include="TestClasses\EieioBucketMetadata.cs" />
     <Compile Include="TestClasses\Order.cs" />
     <Compile Include="TestClasses\OrderDetail.cs" />
     <Compile Include="TestClasses\Product.cs" />
     <Compile Include="TestClasses\RangeTester.cs" />
     <Compile Include="TestClasses\UserProfile.cs" />
-    <Compile Include="TestClasses\WellData.cs" />
+    <Compile Include="TestClasses\BucketlData.cs" />
     <Compile Include="TestDataLoading.cs" />
   </ItemGroup>
   <ItemGroup>

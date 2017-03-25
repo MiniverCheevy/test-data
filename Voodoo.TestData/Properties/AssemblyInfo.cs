@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // associated with an assembly.
 
 [assembly: AssemblyVersion("1.0.16")]
-[assembly: AssemblyFileVersion("1.0.15")]
+[assembly: AssemblyFileVersion("1.0.16")]
 [assembly: AssemblyTitle("Voodoo.TestData")]
 [assembly:
 	AssemblyDescription(

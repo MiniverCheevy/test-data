@@ -23,7 +23,7 @@ namespace Voodoo.TestData.Tests
 		{
 			for (var i = 0; i < 100; i++)
 			{
-				var subject = new EieioWell();
+				var subject = new EieioBucket();
 				TestHelper.Randomizer.Randomize(subject);
 				Assert.IsTrue(subject.BlockNumber.Length <= 5);
 			}
@@ -42,7 +42,7 @@ namespace Voodoo.TestData.Tests
 		[TestMethod]
 		public void Randomizer_ProblematicClass_IsOk()
 		{
-			var subject = new WellData();
+			var subject = new BucketlData();
 			TestHelper.Randomizer.Randomize(subject);
 			Assert.IsNotNull(subject.Contractor);
 		}

@@ -101,7 +101,7 @@ If I'm not back in five minutes, just wait longer.
 If we knew what it was we were doing, it would not be called research, would it?
 If you think that by threatening me you can get me to do what you want ... well, that's where you're right. But I am only saying that because I care. There's a lot of decaffeinated brands on the market that are just as tasty as the real thing.
 If you think the problems the Government creates are bad, just wait until you see thier solutions.
-If you want to build a ship, dont drum up the men to gather wood, divide the work and give orders. Instead, teach them to yearn for the vast and endless sea.
+If you want to build a ship, don't drum up the men to gather wood, divide the work and give orders. Instead, teach them to yearn for the vast and endless sea.
 If... she... weighs the same as a duck.. she's made of wood.
 I'll kill a man in a fair fight. Or if I think he's gonna start a fair fight. Or if he bothers me. Or if there's a woman. Or if I'm getting paid. Mostly when I'm getting paid.
 I'm a mog - half man, half dog. I'm my own best friend.
@@ -109,10 +109,10 @@ Im kind of psychic.  I have a fifth sense.  Its like I have ESPN or something.
 I'm sorry I twisted your DNA like a kitten with a ball of yarn.
 I'm telling you Teal'c, if we don't find a way out of this soon, I'm going to lose it. Lose it, it means go crazy. Nut. Insane. Bonzo. No longer in possession of one's faculties, three fries short of a happy meal, wacko!
 I'm your density. I mean... your destiny.
-In my life I have found two things of priceless worth - learning and loving. Nothing else - not fame, not power, not achievement for its own sake - can possible have the same lasting value. For when your life is over, if you can say 'I have learned' and 'I have loved,' you will also be able to say 'I have been happy.
-In the beginning was the plan.  And then came the assumptions.  And the assumptions were without form.  And the plan was without substance.   And darkness was upon the face of the workers.  And they spoke among themselves saying, "It is a crock of shit and it stinketh."  And the workers went unto their supervisors and said,  "It is a pale of dung and none may abide the odor thereof."  And the supervisor went unto their managers and said,  "It is a container of excrement and it is very strong, such that none may abide by it."  And the managers went unto their directors, saying,  "It is a vessel of fertilizer, and none may abide its strength."  And the directors spoke among themselves, saying to one another,   "It contains that which aids plant growth and it is very strong."    nd the directors went unto the vice presidents, saying unto them,  "It promotes growth and is very powerful."  And the vice presidents went unto the president, saying unto him,  "The new plan will promote the growth and vigor of the company, with powerful effects."  And the president looked upon the plan and saw that it was good.  And the plan became policy.  This is how shit happens.
+In my life I have found two things of priceless worth - learning and loving. Nothing else - not fame, not power, not achievement for its own sake - can possible have the same lasting value. For when your life is over, if you can say 'I have learned' and 'I have loved,' you will also be able to say 'I have been happy.'
+In the beginning was the plan.  And then came the assumptions.  And the assumptions were without form.  And the plan was without substance.   And darkness was upon the face of the workers.  And they spoke among themselves saying, "It is a crock of shit and it stinketh."  And the workers went unto their supervisors and said,  "It is a pale of dung and none may abide the odor thereof."  And the supervisor went unto their managers and said,  "It is a container of excrement and it is very strong, such that none may abide by it."  And the managers went unto their directors, saying,  "It is a vessel of fertilizer, and none may abide its strength."  And the directors spoke among themselves, saying to one another,   "It contains that which aids plant growth and it is very strong."    And the directors went unto the vice presidents, saying unto them,  "It promotes growth and is very powerful."  And the vice presidents went unto the president, saying unto him,  "The new plan will promote the growth and vigor of the company, with powerful effects."  And the president looked upon the plan and saw that it was good.  And the plan became policy.  This is how shit happens.
 Incompetence is when you earnestly believe you can compensate for a lack of skill by doubling your efforts. There's no end to what you can't do.
-Interfaces are like alcohol - they are a lot of fun when used in moderation.
+Interfaces are like alcohol - they are both a lot of fun when used in moderation.
 It happens sometimes. People just explode. Natural causes.
 It was the pioneer days; people had to make their own interrogation rooms. Out of cornmeal.
 It's 106 miles to Chicago, we've got a full tank of gas, half a pack of cigarettes, it's dark, and we're wearing sunglasses.
@@ -209,12 +209,12 @@ There is an expression in the Wasteland: "Old World Blues." It refers to those s
 There is no spoon.
 There's no reason to become alarmed, and we hope you'll enjoy the rest of your flight.  By the way, is there anyone on board who knows how to fly a plane?
 There's so much comedy on television. Does that cause comedy in the streets?
-These arent the droids youre looking for.
+These aren't the droids you're looking for.
 These go to eleven.
 They all adore him. They think he's a righteous dude.
 They asked me how well I understood theoretical physics. I said I had a theoretical degree in physics. They said welcome aboard.
 They invade our space and we fall back. They assimilate entire worlds and we fall back. Not again. The line must be drawn here!
-Theyve done studies, you know. Sixty percent of the time, it works every time.
+They've done studies, you know. Sixty percent of the time, it works every time.
 Time is an illusion. Lunchtime doubly so.
 Time is what turns kittens into cats.
 Time wounds all heels.
@@ -250,7 +250,7 @@ When you wish upon a falling star, your dreams can come true. Unless it's really
 When you're in jail, a good friend will be trying to bail you out. A best friend will be in the cell next to you saying, 'Damn, that was fun'.
 Where's my super suit?
 Why do we tell you to turn it off and on again? Because we don't have the slightest clue what's wrong with it, and it's really easy to induce coma in computers and have their built-in team of automatic doctors try to figure it out for us.
-Why dont you smegging well smeg off, you annoying little smeggy smegging smegger!
+Why don't you smegging well smeg off, you annoying little smeggy smegging smegger!
 With the first link, the chain is forged. The first speech censored, the first thought forbidden, the first freedom denied, chains us all irrevocably.
 Would it save you a lot of time if I just gave up and went mad now?
 Yippee-ki-yay.
@@ -264,3 +264,4 @@ Your mother was a hamster and your father smelt of elderberries.  Now go away, o
 As we know, There are known knowns. There are things we know we know. We also know There are known unknowns. That is to say We know there are some things We do not know. But there are also unknown unknowns, The ones we don’t know We don’t know.
 There are 2 hard problems in computer science: caching, naming, and off-by-1 errors
 It’s much easier to recover from no abstraction than the wrong abstraction.
+Inversion of control is a common feature of frameworks, but it's something that comes at a price. It tends to be hard to understand and leads to problems when you are trying to debug. So on the whole I prefer to avoid it unless I need it. This isn't to say it's a bad thing, just that I think it needs to justify itself over the more straightforward alternative. - Robert Martin
