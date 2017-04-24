@@ -1,7 +1,6 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Voodoo.TestData
 {
@@ -38,10 +37,10 @@ namespace Voodoo.TestData
 
 					var origString = $"{orig.ToShortDateString()} {orig.ToShortTimeString()}";
 					var mapString = $"{map.ToShortDateString()} {map.ToShortTimeString()}";
-                    Assert.AreEqual(origString,mapString, property.Name);
+                    Affirm.AreEqual(origString,mapString, property.Name);
 				}
 				else
-                    Assert.AreEqual(original, mapped, property.Name);
+                    Affirm.AreEqual(original, mapped, property.Name);
 			}
 			var sourceCollections =
 				SourceProperties.Where(
@@ -51,7 +50,7 @@ namespace Voodoo.TestData
 			foreach (var property in sourceCollections)
 			{
 				var collection = property.GetValue(source, null);
-				Assert.IsNotNull(collection,
+                Affirm.IsNotNull(collection,
 				    $"{property.Name} is an uninitialized collection in entity");
 			}
 			var targetCollections =
@@ -62,7 +61,7 @@ namespace Voodoo.TestData
 			foreach (var property in targetCollections)
 			{
 				var collection = property.GetValue(message, null);
-                Assert.IsNotNull(collection, $"{property.Name} is an uninitialized collection in entity");
+                Affirm.IsNotNull(collection, $"{property.Name} is an uninitialized collection in entity");
 			}
 		}
 	}
