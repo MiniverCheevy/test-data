@@ -38,11 +38,9 @@ namespace Voodoo.TestData
     }
     public class AffirmationFailedException: Exception
     {
-        private string message;
-
-        public AffirmationFailedException(string message)
+        public AffirmationFailedException(string message):base(message)
         {
-            this.message = message;
+
         }
     }
 }
