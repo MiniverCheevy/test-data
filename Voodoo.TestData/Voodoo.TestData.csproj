@@ -1,175 +1,69 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{397A8EA0-A5AE-41B3-A00F-872C03683E67}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Voodoo.TestData</RootNamespace>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Voodoo.TestData</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>TestData.snk</AssemblyOriginatorKeyFile>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
-    <SccProjectName>SAK</SccProjectName>
-    <SccLocalPath>SAK</SccLocalPath>
-    <SccAuxPath>SAK</SccAuxPath>
-    <SccProvider>SAK</SccProvider>
-    <TargetFrameworkProfile />
+    <RootNamespace>Voodoo.TestData</RootNamespace>
+    <Version>2.0.00-alpha</Version>
+    <PackageId>Voodoo.TestData</PackageId>
+    <Authors>Shawn Doucet</Authors>
+    <Company></Company>
+    <Product>Voodoo.Patterns</Product>
+    <Description>A c# library for generating test data, offering the option to randomize an object or customize randomization strategies</Description>
+    <PackageTags>test tdd random data</PackageTags>
+    <Copyright>2011</Copyright>
+    <PackageProjectUrl>https://github.com/MiniverCheevy/test-data/</PackageProjectUrl>
+    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/MiniverCheevy/test-data/</RepositoryUrl>
+    <FileVersion>2.0.0.0</FileVersion>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug</OutputPath>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Transactions" />
-    <Reference Include="System.Web" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Voodoo, Version=2.2.18.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Voodoo.Patterns.2.2.18\lib\net40\Voodoo.dll</HintPath>
-    </Reference>
+    <Compile Remove="Program.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapters\HtmlAdapter.cs" />
-    <Compile Include="Adapters\IAdpater.cs" />
-    <Compile Include="Adapters\ReflectionAdapter.cs" />
-    <Compile Include="Adapters\SqlServerAdapter.cs" />
-    <Compile Include="Affirm.cs" />
-    <Compile Include="Builders\AddressBuilder.cs" />
-    <Compile Include="Builders\PersonBuilder.cs" />
-    <Compile Include="MappingTestHelper.cs" />
-    <Compile Include="Models\AgeRange.cs" />
-    <Compile Include="Models\CityStateZip.cs" />
-    <Compile Include="Models\DataTarget.cs" />
-    <Compile Include="Models\Gender.cs" />
-    <Compile Include="RandomExtensions.cs" />
-    <Compile Include="RandomSeedData.cs" />
-    <Compile Include="Models\RandomPerson.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\RandomAddress.cs" />
-    <Compile Include="RandomDataGenerator.cs" />
-    <Compile Include="Strategy\NameStrategy\PropertyEndsWithIdNameStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\BoolStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\ByteStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\DateStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\DecimalStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\DoubleStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\IntStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\LongStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\RangedGenerationStrategies.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\ShortStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PrimitiveStrategy\SingleStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\RangeGenerationStrategyFactory.cs" />
-    <Compile Include="TestHelper.cs" />
-    <Compile Include="Randomizer.cs" />
-    <Compile Include="Strategy\TypeStrategy\StringGenerationStrategy.cs" />
-    <Compile Include="Strategy\GenerationStrategy.cs" />
-    <Compile Include="Strategy\TypeStrategy\PredefinedSetTypeStrategy.cs" />
+    <None Remove="Data\AddressLine2.txt" />
+    <None Remove="Data\Adjective.txt" />
+    <None Remove="Data\AutoFill.txt" />
+    <None Remove="Data\business.txt" />
+    <None Remove="Data\colors.txt" />
+    <None Remove="Data\comment.txt" />
+    <None Remove="Data\corporate.txt" />
+    <None Remove="Data\female.txt" />
+    <None Remove="Data\grocery.txt" />
+    <None Remove="Data\Industry.txt" />
+    <None Remove="Data\last.txt" />
+    <None Remove="Data\LoremIpsum.txt" />
+    <None Remove="Data\male.txt" />
+    <None Remove="Data\material.txt" />
+    <None Remove="Data\star-trek.txt" />
+    <None Remove="Data\streetparts.txt" />
+    <None Remove="Data\zip5.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Data\female.txt" />
-    <EmbeddedResource Include="Data\last.txt" />
-    <EmbeddedResource Include="Data\male.txt" />
-    <EmbeddedResource Include="Data\streetparts.txt" />
-    <EmbeddedResource Include="Data\zip5.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
-    <None Include="TestData.snk" />
-    <None Include="Voodoo.TestData.nuspec" />
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="Data\AddressLine2.txt" />
     <EmbeddedResource Include="Data\Adjective.txt" />
     <EmbeddedResource Include="Data\AutoFill.txt" />
     <EmbeddedResource Include="Data\business.txt" />
     <EmbeddedResource Include="Data\colors.txt" />
     <EmbeddedResource Include="Data\comment.txt" />
+    <EmbeddedResource Include="Data\corporate.txt" />
+    <EmbeddedResource Include="Data\female.txt" />
     <EmbeddedResource Include="Data\grocery.txt" />
     <EmbeddedResource Include="Data\Industry.txt" />
-    <EmbeddedResource Include="Data\material.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
+    <EmbeddedResource Include="Data\last.txt" />
     <EmbeddedResource Include="Data\LoremIpsum.txt" />
+    <EmbeddedResource Include="Data\male.txt" />
+    <EmbeddedResource Include="Data\material.txt" />
+    <EmbeddedResource Include="Data\star-trek.txt" />
+    <EmbeddedResource Include="Data\streetparts.txt" />
+    <EmbeddedResource Include="Data\zip5.txt" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Data\AddressLine2.txt" />
-    <Content Include="Data\corporate.txt" />
-    <Content Include="Data\star-trek.txt" />
+    <PackageReference Include="Voodoo.Patterns" Version="3.0.0-alpha" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

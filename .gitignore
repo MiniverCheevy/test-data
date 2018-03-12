@@ -38,3 +38,5 @@ _ReSharper.*
 /packages
 /TestResults
 /_NCrunch_Voodoo.TestData/StoredText
+/.vs/Voodoo.TestData/v15
+/Tests

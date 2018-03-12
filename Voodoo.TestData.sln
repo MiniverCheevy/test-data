@@ -1,23 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voodoo.TestData", "Voodoo.TestData\Voodoo.TestData.csproj", "{397A8EA0-A5AE-41B3-A00F-872C03683E67}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Voodoo.TestData", "Voodoo.TestData\Voodoo.TestData.csproj", "{397A8EA0-A5AE-41B3-A00F-872C03683E67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voodoo.TestDataTest", "Voodoo.TestData.Tests\Voodoo.TestDataTest.csproj", "{E99D3BA5-910C-494F-B4D2-965BC7A5B695}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Voodoo.TestData.Tests.netCoreApp20", "Tests.netCoreApp20\Voodoo.TestData.Tests.netCoreApp20.csproj", "{E54BFEC9-2BB5-4022-98FB-4E12FE3AB3C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Voodoo.TestData.Tests.net461", "Tests.net461\Voodoo.TestData.Tests.net461.csproj", "{61B6F812-E5C1-4CF0-B49F-6BA54EF26EF6}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs34
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Voodoo.TestData.Tests\\Voodoo.TestDataTest.csproj
-		SccProjectName1 = Voodoo.TestData.Tests
-		SccLocalPath1 = Voodoo.TestData.Tests
-		SccProjectUniqueName2 = Voodoo.TestData\\Voodoo.TestData.csproj
-		SccProjectName2 = Voodoo.TestData
-		SccLocalPath2 = Voodoo.TestData
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -27,12 +19,19 @@ Global
 		{397A8EA0-A5AE-41B3-A00F-872C03683E67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{397A8EA0-A5AE-41B3-A00F-872C03683E67}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{397A8EA0-A5AE-41B3-A00F-872C03683E67}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E99D3BA5-910C-494F-B4D2-965BC7A5B695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E99D3BA5-910C-494F-B4D2-965BC7A5B695}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E99D3BA5-910C-494F-B4D2-965BC7A5B695}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E99D3BA5-910C-494F-B4D2-965BC7A5B695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E54BFEC9-2BB5-4022-98FB-4E12FE3AB3C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E54BFEC9-2BB5-4022-98FB-4E12FE3AB3C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E54BFEC9-2BB5-4022-98FB-4E12FE3AB3C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E54BFEC9-2BB5-4022-98FB-4E12FE3AB3C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B6F812-E5C1-4CF0-B49F-6BA54EF26EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B6F812-E5C1-4CF0-B49F-6BA54EF26EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B6F812-E5C1-4CF0-B49F-6BA54EF26EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B6F812-E5C1-4CF0-B49F-6BA54EF26EF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {804DB10F-EDAD-4638-BE18-89B8958D5D09}
 	EndGlobalSection
 EndGlobal
